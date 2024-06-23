@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { data, type Data } from './data';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppRail, AppRailTile, AppRailAnchor } from '@skeletonlabs/skeleton';
+	let currentTile: number = 0;
 	import  logoEnem  from '$lib/enem-2566.png';
+	import gitHub from '$lib/icons8-github-48.png';
+	import livros from '$lib/icons8-books-50.png';
 
 	let mathGrade: number[][] = [
 		[30, 714, 800, 879],
@@ -43,7 +47,28 @@
 
 <AppShell>
 	<svelte:fragment slot="header"><div class=" bg-primary-700 flex-row py-2"><h1 class="font-sans text-2xl text-center italic font-semibold tracking-wider ">Calculadora</h1><img class="object-contain h-15 w-56 m-auto" src="{logoEnem}" alt="Logo Enem"></div></svelte:fragment>
-	<svelte:fragment slot="sidebarLeft">Sidebar Left</svelte:fragment>
+	<svelte:fragment slot="sidebarLeft"><AppRail>
+		<svelte:fragment slot="lead">
+			<AppRailAnchor href="/" >(icon)</AppRailAnchor>
+		</svelte:fragment>
+		<!-- --- -->
+		<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
+			<svelte:fragment slot="lead">(icon)</svelte:fragment>
+			<span>Tile 1</span>
+		</AppRailTile>
+		<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
+			<svelte:fragment slot="lead">(icon)</svelte:fragment>
+			<span>Tile 2</span>
+		</AppRailTile>
+		<AppRailTile bind:group={currentTile} name="tile-3" value={2} title="tile-3">
+			<svelte:fragment slot="lead">(icon)</svelte:fragment>
+			<span>Tile 3</span>
+		</AppRailTile>
+		<!-- --- -->
+		<svelte:fragment slot="trail">
+			<AppRailAnchor href="/" target="_blank" title="Account">(icon)</AppRailAnchor>
+		</svelte:fragment>
+	</AppRail></svelte:fragment>
 	<!-- (sidebarRight) -->
 	<!-- (pageHeader) -->
 	<!-- Router Slot -->
