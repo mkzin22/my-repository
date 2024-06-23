@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { data, type Data } from './data';
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import  logoEnem  from '$lib/enem-2566.png';
 
 	let mathGrade: number[][] = [
 		[30, 714, 800, 879],
@@ -39,40 +41,48 @@
 	}
 </script>
 
-<h1>Calculadora do ENEM</h1>
-<p>
-	Esta calculadora serve para você entender que se tivesse aprendido matemática não teria tirado
-	essa nota paia 💩
-</p>
+<AppShell>
+	<svelte:fragment slot="header"><div class=" bg-primary-700 flex-row py-2"><h1 class="font-sans text-2xl text-center italic font-semibold tracking-wider ">Calculadora</h1><img class="object-contain h-15 w-56 m-auto" src="{logoEnem}" alt="Logo Enem"></div></svelte:fragment>
+	<svelte:fragment slot="sidebarLeft">Sidebar Left</svelte:fragment>
+	<!-- (sidebarRight) -->
+	<!-- (pageHeader) -->
+	<!-- Router Slot -->
 
-<table>
-	<tr>
-		<th>Prova do Enem</th><th>Nota mínima</th><th>Sua nota</th><th>Peso</th><th>Nota com peso</th>
-	</tr>
-	{#each arr as materia}
+	<p class="py-8"> Faça a simulação da sua nota do enem, caso você tivesse acertado determinado número de questões </p>
+
+	<table>
 		<tr>
-			<td>{materia.prova}</td>
-			<td><input type="number" placeholder="0.01" bind:value={materia.minGrade} /></td>
-			<td><input type="number" placeholder="780.00" bind:value={materia.nota} /></td>
-			<td><input type="number" placeholder="1.50" bind:value={materia.peso} /></td>
-			<td>{calcularNota(materia)}</td>
+			<th class="bg-primary-700 py-3">Prova do Enem</th><th class="bg-primary-700">Nota mínima</th><th class="bg-primary-700">Sua nota</th><th class="bg-primary-700">Peso</th><th class="bg-primary-700">Nota com peso</th>
 		</tr>
+		{#each arr as materia}
+			<tr>
+				<td>{materia.prova}</td>
+				<td><input class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-36" type="number" placeholder="0.01" bind:value={materia.minGrade} /></td>
+				<td><input class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-36" type="number" placeholder="780.00" bind:value={materia.nota} /></td>
+				<td><input class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-36" type="number" placeholder="1.50" bind:value={materia.peso} /></td>
+				<td >{calcularNota(materia)}</td>
+			</tr>
+		{/each}
+	
+		<tr>
+			<td /><td /><td>Total</td><td>Total</td>
+		</tr>
+		<tr>
+			<td /><td /><td>{calcularScore(arr).toFixed(2)}(A)</td><td
+				>{calcularSomaDosPesos(arr).toFixed(2)}(B)</td
+			>
+		</tr>
+		<td><i>Nota do estudante (B/A) = {calcularScoreFinal(arr).toFixed(2)}</i></td>
+	</table>
+	<h3>Com base nos dados entre 2020 e 2023</h3>
+	{#each mathGrade as m}
+		<p>Caso você tivesse acertado {m[0]} questões em matemática sua nota seria:</p>
+		Entre {calcularSimulation(arr, m[1]).toFixed(2)} e {calcularSimulation(arr, m[3]).toFixed(2)}
+		<br />
+		com média de {calcularSimulation(arr, m[2]).toFixed(2)}
 	{/each}
-
-	<tr>
-		<td /><td /><td>Total</td><td>Total</td>
-	</tr>
-	<tr>
-		<td /><td /><td>{calcularScore(arr).toFixed(2)}(A)</td><td
-			>{calcularSomaDosPesos(arr).toFixed(2)}(B)</td
-		>
-	</tr>
-	<td><i>Nota do estudante (B/A) = {calcularScoreFinal(arr).toFixed(2)}</i></td>
-</table>
-<h3>Com base nos dados entre 2020 e 2023</h3>
-{#each mathGrade as m}
-	<p>Caso você tivesse acertado {m[0]} questões em matemática sua nota seria:</p>
-	Entre {calcularSimulation(arr, m[1]).toFixed(2)} e {calcularSimulation(arr, m[3]).toFixed(2)}
-	<br />
-	com média de {calcularSimulation(arr, m[2]).toFixed(2)}
-{/each}
+	<slot />
+	<!-- ---- / ---- -->
+	<svelte:fragment slot="pageFooter">Page Footer</svelte:fragment>
+	<svelte:fragment slot="footer">Footer</svelte:fragment>
+</AppShell>
