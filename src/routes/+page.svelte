@@ -6,6 +6,11 @@
 	import  logoEnem  from '$lib/enem-2566.png';
 	import gitHub from '$lib/icons8-github-48.png';
 	import livros from '$lib/icons8-books-50.png';
+	import navBar from '$lib/icons8-cardápio-32.png';
+	import redacao from '$lib/icons8-redação-48.png'
+	import matematica from '$lib/icons8-matemática-48.png';
+	import cN from "$lib/icons8-física-50.png";
+	import cH from "$lib/icons8-geografia-48.png"
 
 	let mathGrade: number[][] = [
 		[30, 714, 800, 879],
@@ -49,31 +54,42 @@
 	<svelte:fragment slot="header"><div class=" bg-primary-700 flex-row py-2"><h1 class="font-sans text-2xl text-center italic font-semibold tracking-wider ">Calculadora</h1><img class="object-contain h-15 w-56 m-auto" src="{logoEnem}" alt="Logo Enem"></div></svelte:fragment>
 	<svelte:fragment slot="sidebarLeft"><AppRail>
 		<svelte:fragment slot="lead">
-			<AppRailAnchor href="/" >(icon)</AppRailAnchor>
+			<AppRailAnchor href="/" ><img class='m-auto' src="{navBar}" alt="barra de navegação"></AppRailAnchor>
 		</svelte:fragment>
 		<!-- --- -->
 		<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<span>Tile 1</span>
+			<svelte:fragment slot="lead"><img class="m-auto py-2" src="{redacao}" alt="redação"></svelte:fragment>
+			<span>Redação</span>
 		</AppRailTile>
 		<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<span>Tile 2</span>
+			<svelte:fragment slot="lead"><img class="m-auto py-2" src="{livros}" alt="linguagens"></svelte:fragment>
+			<span>Linguagens</span>
 		</AppRailTile>
 		<AppRailTile bind:group={currentTile} name="tile-3" value={2} title="tile-3">
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<span>Tile 3</span>
+			<svelte:fragment slot="lead"><img class="m-auto py-2" src="{matematica}" alt="matematica"></svelte:fragment>
+			<span>matemática</span>
 		</AppRailTile>
+			<AppRailTile bind:group={currentTile} name="tile-4" value={3} title="tile-4">
+				<svelte:fragment slot="lead"><img class="m-auto py-2" src="{cN}" alt="CN"></svelte:fragment>
+				<span class="py-1">Ciências da natureza</span>
+				
+		</AppRailTile>
+
+		<AppRailTile bind:group={currentTile} name="tile-5" value={4} title="tile-5">
+			<svelte:fragment slot="lead"><img class="m-auto py-2" src="{cH}" alt="CH"></svelte:fragment>
+			<span>Ciências humanas</span>
+			
+	</AppRailTile>
 		<!-- --- -->
 		<svelte:fragment slot="trail">
-			<AppRailAnchor href="/" target="_blank" title="Account">(icon)</AppRailAnchor>
+			<AppRailAnchor href="/" target="_blank" title="Account"><img src="{gitHub}" alt="Git username" class="py-8 m-auto"></AppRailAnchor>
 		</svelte:fragment>
 	</AppRail></svelte:fragment>
 	<!-- (sidebarRight) -->
 	<!-- (pageHeader) -->
 	<!-- Router Slot -->
 
-	<p class="py-8"> Faça a simulação da sua nota do enem, caso você tivesse acertado determinado número de questões </p>
+	<p class="text-center py-8"> Faça a simulação da sua nota do enem, caso você tivesse acertado determinado número de questões </p>
 
 	<table>
 		<tr>
