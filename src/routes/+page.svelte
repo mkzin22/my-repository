@@ -346,11 +346,11 @@
   <!-- (pageHeader) -->
   <!-- Router Slot -->
 
-  <p class="text-center py-8">
+  <p class="text-center py-8 font-bold">
     Faça a simulação da sua nota do enem, com base no determinado número de
     questões corretas.
   </p>
-  <p class="text-center">Essa calculadora é focada em</p>
+  <p class="text-center font-bold">Essa simlação e focada em resultar qual seria sua nota, caso tivesse acertado determinado número de questões em matemática.</p>
   <br />
 
   <table class="m-auto variant-ghost-surface text-sm">
