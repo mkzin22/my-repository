@@ -94,7 +94,7 @@
       <img class="w-96" src={eCalc} alt="E-Calc" />
       <svelte:fragment slot="trail"
         ><LightSwitch />
-        <a href="https://discord.gg/q3mVxH2S" target="_blank"
+        <a href="https://discord.gg/bbSjMaCDwR" target="_blank"
           ><img
             class="hover:bg-tertiary-100 rounded-full"
             src={discord}
@@ -185,7 +185,7 @@
           ><img src={filosofia} alt="" />
           <p>Filosofia</p></a
         >
-        <a href="https://discord.gg/q3mVxH2S" target="_blank" class="logo-item"
+        <a href="https://discord.gg/bbSjMaCDwR" target="_blank" class="logo-item"
           ><img src={duvidas} alt="duvidas" />
           <p>Fale conosco</p></a
         >
@@ -358,7 +358,7 @@
   </p>
   <br />
 
-  <table class="m-auto variant-ghost-surface text-sm">
+  <table class="m-auto variant-ghost-surface text-sm text-center">
     <tr>
       <th class="bg-primary-700 py-3 text-tertiary-50">Prova do Enem</th><th
         class="bg-primary-700 text-tertiary-50">Nota mínima</th
