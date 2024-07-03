@@ -29,7 +29,7 @@
   import ufrn from "$lib/logo-ufrn.png";
   import metropole from "$lib/logo-metropole.png";
   import discord from "$lib/icons8-logo-discord-64.png";
-  import eCalc from "$lib/e-calc-logo.png";
+  import eCalc from "$lib/logo-e-calc.png";
   import biologia from "$lib/icons8-biologia-50.png";
   import quimica from "$lib/icons8-sódio-60.png";
   import historia from "$lib/icons8-coliseu-50.png";
@@ -94,7 +94,7 @@
       <img class="w-96" src={eCalc} alt="E-Calc" />
       <svelte:fragment slot="trail"
         ><LightSwitch />
-        <a href="https://discord.gg/q68hXveA" target="_blank"
+        <a href="https://discord.gg/q3mVxH2S" target="_blank"
           ><img
             class="hover:bg-tertiary-100 rounded-full"
             src={discord}
@@ -185,7 +185,7 @@
           ><img src={filosofia} alt="" />
           <p>Filosofia</p></a
         >
-        <a href="https://discord.gg/q68hXveA" target="_blank" class="logo-item"
+        <a href="https://discord.gg/q3mVxH2S" target="_blank" class="logo-item"
           ><img src={duvidas} alt="duvidas" />
           <p>Fale conosco</p></a
         >
@@ -243,19 +243,19 @@
               melhora:
             </p>
 
-            <div class="btn-group variant-filled flex justify-center">
+            <div class=" rounded-xl variant-filled flex justify-center w-72 m-auto p-3 gap-8">
               <button
                 ><a
-                  href="https://app.planejativo.com/?gad_source=1&gclid=CjwKCAjw4f6zBhBVEiwATEHFVgmRj7jpRPokb3cmmsT8Fe9uwkuLisBQwRAGERcwD8eEKzxtVoH3cBoC8gcQAvD_BwE"
+                  href="https://app.planejativo.com/?gad_source=1&gclid=CjwKCAjw4f6zBhBVEiwATEHFVgmRj7jpRPokb3cmmsT8Fe9uwkuLisBQwRAGERcwD8eEKzxtVoH3cBoC8gcQAvD_BwE" target="_blank"
                   >Planejativo</a
                 ></button
               >
               <button
-                ><a href="https://acelerenoenem.com.br">Acelere no ENEM</a
+                ><a href="https://acelerenoenem.com.br" target="_blank">Acelere no ENEM</a
                 ></button
               >
               <button
-                ><a href="https://repertorioenem.com.br/01-2/"
+                ><a href="https://repertorioenem.com.br/01-2/" target="_blank"
                   >Repertório ENEM</a
                 ></button
               >
@@ -308,37 +308,39 @@
 
       <ul class="list-disc pl-7 variant-glass-primary py-5 mt-3">
         <li>
-          <strong> Faça simulados e cronometre-os!</strong> isso fará com que você tenha mais
-          noção de quanto tempo levarás para finalizar uma questão e uma prova.
+          <strong> Faça simulados e cronometre-os!</strong> isso fará com que você
+          tenha mais noção de quanto tempo levarás para finalizar uma questão e uma
+          prova.
         </li>
         <li>
-          <strong> Na reta final, não passe o dia estudando! </strong>tire um tempo para relaxar
-          um pouco e revisar os conteúdos, evite o encarretamento deles!
+          <strong> Na reta final, não passe o dia estudando! </strong>tire um
+          tempo para relaxar um pouco e revisar os conteúdos, evite o
+          encarretamento deles!
         </li>
         <li>
-          <strong> Leia diversas notícias verídicas! Fuja das Fake News!</strong> Isso ajudará no
-          seu desempenho em estruturar de de uma maneira mais fácil e tranquila
-          suas redações, sem deixar faltar repertórios.
+          <strong>
+            Leia diversas notícias verídicas! Fuja das Fake News!</strong
+          > Isso ajudará no seu desempenho em estruturar de de uma maneira mais fácil
+          e tranquila suas redações, sem deixar faltar repertórios.
         </li>
         <li>
-          <strong>Adote formas diferentes de estudar!</strong>  não se prenda a uma ou duas, tenha
-          diversas estratégias, isso ajudará em seu desempenho e fará com que
-          você se canse menos.
+          <strong>Adote formas diferentes de estudar!</strong> não se prenda a uma
+          ou duas, tenha diversas estratégias, isso ajudará em seu desempenho e fará
+          com que você se canse menos.
         </li>
         <li>
-          <strong> Desligue o celular e vá viver a vida!</strong> Parece uma dica simples, mas
-          desligar o celular é mais difícil do que parece. Tire uma a duas horas
-          do seu dia para mantê-lo desligado, viva em um mundo sem notificações,
+          <strong> Desligue o celular e vá viver a vida!</strong> Parece uma dica
+          simples, mas desligar o celular é mais difícil do que parece. Tire uma
+          a duas horas do seu dia para mantê-lo desligado, viva em um mundo sem notificações,
           e-mails e whatsapp. Os primeiros dias podem ser um pouco assustadores,
-          mas depois você vai entender o porquê. Aproveite uma vida menos
-          imediatista para viver melhor, faça caminhadas e outros exercícios,
-          conheça o seu bairro e seus vizinhos, invista seu tempo em coisas que
-          você tem vontade de fazer e muitas vezes a preguiça ou a tela do
-          celular te impedem.
+          mas depois você vai entender o porquê. Aproveite uma vida menos imediatista
+          para viver melhor, faça caminhadas e outros exercícios, conheça o seu bairro
+          e seus vizinhos, invista seu tempo em coisas que você tem vontade de fazer
+          e muitas vezes a preguiça ou a tela do celular te impedem.
         </li>
       </ul>
 
-	  <p> </p>
+      <p></p>
     </Drawer></svelte:fragment
   >
 
@@ -350,23 +352,26 @@
     Faça a simulação da sua nota do enem, com base no determinado número de
     questões corretas.
   </p>
-  <p class="text-center font-bold">Essa simlação e focada em resultar qual seria sua nota, caso tivesse acertado determinado número de questões em matemática.</p>
+  <p class="text-center font-bold">
+    Essa simlação e focada em resultar qual seria sua nota, caso tivesse
+    acertado determinado número de questões em matemática.
+  </p>
   <br />
 
   <table class="m-auto variant-ghost-surface text-sm">
     <tr>
-      <th class="bg-primary-700 py-3">Prova do Enem</th><th
-        class="bg-primary-700">Nota mínima</th
-      ><th class="bg-primary-700">Sua nota</th><th class="bg-primary-700"
-        >Peso</th
-      ><th class="bg-primary-700">Nota com peso</th>
+      <th class="bg-primary-700 py-3 text-tertiary-50">Prova do Enem</th><th
+        class="bg-primary-700 text-tertiary-50">Nota mínima</th
+      ><th class="bg-primary-700 text-tertiary-50">Sua nota</th><th
+        class="bg-primary-700 text-tertiary-50">Peso</th
+      ><th class="bg-primary-700 text-tertiary-50">Nota com peso</th>
     </tr>
     {#each arr as materia}
       <tr>
         <td>{materia.prova}</td>
         <td
           ><input
-            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48"
+            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48 text-tertiary-50"
             type="number"
             placeholder="0.01"
             bind:value={materia.minGrade}
@@ -374,7 +379,7 @@
         >
         <td
           ><input
-            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48"
+            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48 text-tertiary-50"
             type="number"
             placeholder="780.00"
             bind:value={materia.nota}
@@ -382,7 +387,7 @@
         >
         <td
           ><input
-            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48"
+            class="bg-primary-800 rounded-lg border-blue-400 border-2 m-2 w-16 md:w-48 text-tertiary-50"
             type="number"
             placeholder="1.50"
             bind:value={materia.peso}
@@ -432,14 +437,18 @@
       slotTrail="place-content-end"
     >
       <svelte:fragment slot="lead">
-        <a href="https://www.ufrn.br/" target="_blank"><img src={ufrn} alt="logo ufrn" /></a></svelte:fragment
+        <a href="https://www.ufrn.br/" target="_blank"
+          ><img src={ufrn} alt="logo ufrn" /></a
+        ></svelte:fragment
       >
-      <div class="text-center">
+      <div class="text-center text-tertiary-50">
         <p>Desenvolvido por estudantes do Instituto Metrópole Digital</p>
         <p>© Copyright 2024</p>
       </div>
       <svelte:fragment slot="trail"
-        ><a href="https://www.metropoledigital.ufrn.br/portal/" target="_blank"><img src={metropole} alt="logo metropole" /></a></svelte:fragment
+        ><a href="https://www.metropoledigital.ufrn.br/portal/" target="_blank"
+          ><img src={metropole} alt="logo metropole" /></a
+        ></svelte:fragment
       >
     </AppBar>
   </svelte:fragment>
