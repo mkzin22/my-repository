@@ -18,7 +18,6 @@
     drawerStore.open({});
   }
   import { Accordion, AccordionItem } from "@skeletonlabs/skeleton";
-  import logoEnem from "$lib/enem-2566.png";
   import gitHub from "$lib/icons8-github-48.png";
   import livros from "$lib/icons8-books-50.png";
   import navBar from "$lib/icons8-cardápio-48.png";
